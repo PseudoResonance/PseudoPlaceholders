@@ -1,8 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>tk.spongenetwork</groupId>
-	<artifactId>RPG</artifactId>
-	<version>0.1.21-SNAPSHOT</version>
+	<groupId>io.github.pseudoresonance</groupId>
+	<artifactId>PseudoPlaceholders</artifactId>
+	<version>1.0-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -41,17 +42,47 @@
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
 		</repository>
+		<repository>
+			<id>placeholderapi</id>
+			<url>http://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
-			<version>1.12-R0.1-SNAPSHOT</version>
+			<version>1.12.2-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.github.WolfLeader116</groupId>
-			<artifactId>WolfAPI</artifactId>
+			<groupId>io.github.PseudoResonance</groupId>
+			<artifactId>PseudoAPI</artifactId>
 			<version>-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.github.PseudoResonance</groupId>
+			<artifactId>PseudoMusic</artifactId>
+			<version>-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.github.PseudoResonance</groupId>
+			<artifactId>PseudoPlayers</artifactId>
+			<version>-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.github.PseudoResonance</groupId>
+			<artifactId>PseudoUtils</artifactId>
+			<version>-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>me.clip</groupId>
+			<artifactId>placeholderapi</artifactId>
+			<version>2.8.6</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 </project>

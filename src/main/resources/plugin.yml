@@ -1,57 +1,19 @@
-name: RPG
-author: WolfLeader116 and Newoace
-main: tk.spongenetwork.RPG.RPG
-version: 0.1.21
-description: SpongeNetwork RPG Plugin
-depend: [WolfAPI]
+name: PseudoPlaceholders
+author: PseudoResonance
+main: io.github.pseudoresonance.pseudoplaceholders.PseudoPlaceholders
+version: 1.0
+description: Placeholder hooks for PseudoResonance's plugins
+depend: [PseudoAPI]
+softdepend: [PlaceholderAPI]
 commands:
-  rpg:
-    description: RPG Menu
-  rpgxp:
-    description: Displays XP Stats
-  xpskill:
-    description: Displays Skill XP Stats
-  givexp:
-    description: Gives XP
-  takexp:
-    description: Takes XP
-  setxp:
-    description: Setss XP
+  pseudoplaceholders:
+    description: PseudoPlaceholders Menu
 permissions:
-  rpg.xp:
-    description: Allows the player to view xp stats
-    default: true
-    children:
-      rpg.xp.skill.*: true
-  rpg.xp.other:
-    description: Allows the player to view xp stats for other players
+  pseudoplaceholders.reload:
+    description: Allows the player to reload the placeholder hooks
+    default: op
+  pseudoplaceholders.*:
+    description: Gives the user all PseudoPlaceholders permissions
     default: op
     children:
-      rpg.xp: true
-      rpg.xp.other.*: true
-  rpg.givexp:
-    description: Allows the player to give xp
-    default: op
-  rpg.takexp:
-    description: Allows the player to take xp
-    default: op
-  rpg.setxp:
-    description: Allows the player to set xp
-    default: op
-  rpg.reload:
-    description: Allows the player to reload the plugin
-    default: op
-  rpg.reset:
-    description: Allows the player to reset the plugin
-    default: op
-  rpg.*:
-    description: Gives the user all RPG permissions
-    default: op
-    children:
-      rpg.reload: true
-      rpg.reset: true
-      rpg.xp: true
-      rpg.xp.other: true
-      rpg.givexp: true
-      rpg.takexp: true
-      rpg.setxp: true
+      pseudoplaceholders.reload: true
