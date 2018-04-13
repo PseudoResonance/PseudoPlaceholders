@@ -13,7 +13,7 @@ public class PseudoPlaceholdersTC implements TabCompleter {
 		List<String> possible = new ArrayList<String>();
 		if (args.length == 1) {
 			possible.add("help");
-			if (sender.hasPermission("pseudomusic.reload")) {
+			if (sender.hasPermission("pseudoplaceholders.reload")) {
 				possible.add("reload");
 			}
 			if (args[0].equalsIgnoreCase("")) {
