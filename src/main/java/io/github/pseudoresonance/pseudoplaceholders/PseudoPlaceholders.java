@@ -10,6 +10,7 @@ import io.github.pseudoresonance.pseudoapi.bukkit.MainCommand;
 import io.github.pseudoresonance.pseudoapi.bukkit.Message;
 import io.github.pseudoresonance.pseudoapi.bukkit.Message.Errors;
 import io.github.pseudoresonance.pseudoapi.bukkit.PseudoPlugin;
+import io.github.pseudoresonance.pseudoapi.bukkit.PseudoUpdater;
 import io.github.pseudoresonance.pseudoplaceholders.commands.ReloadSC;
 import io.github.pseudoresonance.pseudoplaceholders.completers.PseudoPlaceholdersTC;
 import io.github.pseudoresonance.pseudoplaceholders.hooks.PseudoAPIHooks;
@@ -24,6 +25,10 @@ public class PseudoPlaceholders extends PseudoPlugin {
 	
 	private static MainCommand mainCommand;
 	private static HelpSC helpSubCommand;
+	
+	public void onLoad() {
+		PseudoUpdater.registerPlugin(this);
+	}
 	
 	@Override
 	public void onEnable() {

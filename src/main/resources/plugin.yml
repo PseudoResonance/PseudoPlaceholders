@@ -1,7 +1,7 @@
 name: PseudoPlaceholders
 author: PseudoResonance
 main: io.github.pseudoresonance.pseudoplaceholders.PseudoPlaceholders
-version: 1.0
+version: 1.0.1
 description: Placeholder hooks for PseudoResonance's plugins
 depend: [PseudoAPI]
 softdepend: [PlaceholderAPI]
