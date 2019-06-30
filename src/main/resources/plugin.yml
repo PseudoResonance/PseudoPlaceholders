@@ -3,6 +3,7 @@ author: PseudoResonance
 main: io.github.pseudoresonance.pseudoplaceholders.PseudoPlaceholders
 version: 1.0.1
 description: Placeholder hooks for PseudoResonance's plugins
+api-version: 1.13
 depend: [PseudoAPI]
 softdepend: [PlaceholderAPI]
 commands:
