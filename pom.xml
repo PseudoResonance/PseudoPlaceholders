@@ -81,7 +81,7 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.github.PseudoResonance</groupId>
+			<groupId>com.github.PseudoResonance</groupId>
 			<artifactId>PseudoAPI</artifactId>
 			<version>-SNAPSHOT</version>
 			<scope>provided</scope>
