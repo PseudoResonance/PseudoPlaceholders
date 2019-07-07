@@ -3,7 +3,7 @@ package io.github.pseudoresonance.pseudoplaceholders.hooks;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import io.github.pseudoresonance.pseudoapi.bukkit.playerdata.PlayerDataController;
+import io.github.pseudoresonance.pseudoapi.bukkit.playerdata.ServerPlayerDataController;
 import io.github.pseudoresonance.pseudoutils.PlayerBrand;
 import io.github.pseudoresonance.pseudoutils.TPS;
 import me.clip.placeholderapi.PlaceholderHook;
@@ -23,7 +23,7 @@ public class PseudoUtilsHooks extends PlaceholderHook {
 						return "Not a Player";
 				case "god_mode":
 					if (p != null) {
-						Object o = PlayerDataController.getPlayerSetting(p.getUniqueId().toString(), "godMode");
+						Object o = ServerPlayerDataController.getPlayerSetting(p.getUniqueId().toString(), "godMode");
 						if (o instanceof Boolean) {
 							boolean b = (Boolean) o;
 							if (b)

@@ -11,8 +11,8 @@ import java.time.temporal.ChronoUnit;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import io.github.pseudoresonance.pseudoapi.bukkit.Utils;
 import io.github.pseudoresonance.pseudoapi.bukkit.playerdata.PlayerDataController;
+import io.github.pseudoresonance.pseudoapi.bukkit.utils.Utils;
 import me.clip.placeholderapi.PlaceholderHook;
 
 public class PseudoPlayersHooks extends PlaceholderHook {

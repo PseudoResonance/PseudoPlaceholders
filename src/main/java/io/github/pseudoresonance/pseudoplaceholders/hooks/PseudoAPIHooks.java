@@ -13,8 +13,10 @@ public class PseudoAPIHooks extends PlaceholderHook {
 		switch(identifier) {
 			case "plugins_loaded":
 				return String.valueOf(PluginController.getPlugins().length);
-			case "backend":
-				return Data.getBackend().getName();
+			case "global_backend":
+				return Data.getGlobalBackend().getName();
+			case "server_backend":
+				return Data.getServerBackend().getName();
 			default:
 				return "";
 		}
