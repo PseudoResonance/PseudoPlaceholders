@@ -14,7 +14,7 @@ public class PseudoMusicHooks extends PlaceholderHook {
 		if (Bukkit.getPluginManager().getPlugin("PseudoMusic").isEnabled()) {
 			switch(identifier) {
 				case "now_playing":
-					if (io.github.pseudoresonance.pseudomusic.ConfigOptions.playerType == PlayerType.PRIVATE) {
+					if (io.github.pseudoresonance.pseudomusic.Config.playerType == PlayerType.PRIVATE) {
 						if (p != null) {
 							if (JukeboxController.isPlaying(p))
 								return JukeboxController.getSong(p).getName();
@@ -29,7 +29,7 @@ public class PseudoMusicHooks extends PlaceholderHook {
 							return "None";
 					}
 				case "next_song":
-					if (io.github.pseudoresonance.pseudomusic.ConfigOptions.playerType == PlayerType.PRIVATE) {
+					if (io.github.pseudoresonance.pseudomusic.Config.playerType == PlayerType.PRIVATE) {
 						if (p != null) {
 							if (JukeboxController.isPlaying(p))
 								return JukeboxController.getNextSong(p).getName();
@@ -44,7 +44,7 @@ public class PseudoMusicHooks extends PlaceholderHook {
 							return "None";
 					}
 				case "last_song":
-					if (io.github.pseudoresonance.pseudomusic.ConfigOptions.playerType == PlayerType.PRIVATE) {
+					if (io.github.pseudoresonance.pseudomusic.Config.playerType == PlayerType.PRIVATE) {
 						if (p != null) {
 							if (JukeboxController.isPlaying(p))
 								return JukeboxController.getLastSong(p).getName();
@@ -59,7 +59,7 @@ public class PseudoMusicHooks extends PlaceholderHook {
 							return "None";
 					}
 				case "playing":
-					if (io.github.pseudoresonance.pseudomusic.ConfigOptions.playerType == PlayerType.PRIVATE) {
+					if (io.github.pseudoresonance.pseudomusic.Config.playerType == PlayerType.PRIVATE) {
 						if (p != null) {
 							if (JukeboxController.isPlaying(p))
 								return "True";
@@ -74,7 +74,7 @@ public class PseudoMusicHooks extends PlaceholderHook {
 							return "False";
 					}
 				case "repeating":
-					if (io.github.pseudoresonance.pseudomusic.ConfigOptions.playerType == PlayerType.PRIVATE) {
+					if (io.github.pseudoresonance.pseudomusic.Config.playerType == PlayerType.PRIVATE) {
 						if (p != null) {
 							if (JukeboxController.isRepeating(p))
 								return "True";
@@ -89,7 +89,7 @@ public class PseudoMusicHooks extends PlaceholderHook {
 							return "False";
 					}
 				case "shuffling":
-					if (io.github.pseudoresonance.pseudomusic.ConfigOptions.playerType == PlayerType.PRIVATE) {
+					if (io.github.pseudoresonance.pseudomusic.Config.playerType == PlayerType.PRIVATE) {
 						if (p != null) {
 							if (JukeboxController.isShuffling(p))
 								return "True";

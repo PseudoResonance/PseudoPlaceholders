@@ -32,8 +32,8 @@ public class PseudoPlayersHooks extends PlaceholderHook {
 							}
 							LocalDate firstJoinDate = firstJoinTS.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 							long firstJoinDays = ChronoUnit.DAYS.between(firstJoinDate, Instant.ofEpochMilli(System.currentTimeMillis()).atZone(ZoneId.systemDefault()).toLocalDate());
-							if (firstJoinDays >= io.github.pseudoresonance.pseudoplayers.ConfigOptions.firstJoinTimeDifference) {
-								firstJoinTime = new SimpleDateFormat(io.github.pseudoresonance.pseudoplayers.ConfigOptions.firstJoinTimeFormat).format(firstJoinTS);
+							if (firstJoinDays >= io.github.pseudoresonance.pseudoplayers.Config.firstJoinTimeDifference) {
+								firstJoinTime = new SimpleDateFormat(io.github.pseudoresonance.pseudoplayers.Config.firstJoinTimeFormat).format(firstJoinTS);
 							} else {
 								long diff = System.currentTimeMillis() - firstJoinTS.getTime();
 								if (diff < 0) {
@@ -58,8 +58,8 @@ public class PseudoPlayersHooks extends PlaceholderHook {
 							}
 							LocalDate joinLeaveDate = joinLeaveTS.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 							long joinLeaveDays = ChronoUnit.DAYS.between(joinLeaveDate, Instant.ofEpochMilli(System.currentTimeMillis()).atZone(ZoneId.systemDefault()).toLocalDate());
-							if (joinLeaveDays >= io.github.pseudoresonance.pseudoplayers.ConfigOptions.joinLeaveTimeDifference) {
-								joinLeaveTime = "Since " + new SimpleDateFormat(io.github.pseudoresonance.pseudoplayers.ConfigOptions.joinLeaveTimeFormat).format(joinLeaveTS);
+							if (joinLeaveDays >= io.github.pseudoresonance.pseudoplayers.Config.joinLeaveTimeDifference) {
+								joinLeaveTime = "Since " + new SimpleDateFormat(io.github.pseudoresonance.pseudoplayers.Config.joinLeaveTimeFormat).format(joinLeaveTS);
 							} else {
 								long diff = System.currentTimeMillis() - joinLeaveTS.getTime();
 								if (diff < 0) {

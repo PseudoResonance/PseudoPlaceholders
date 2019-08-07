@@ -5,7 +5,7 @@ version: ${version}
 description: Placeholder hooks for PseudoResonance's plugins
 api-version: 1.13
 depend: [PseudoAPI]
-softdepend: [PlaceholderAPI]
+softdepend: [PlaceholderAPI,PseudoMusic,PseudoPlayers,PseudoUtils]
 commands:
   pseudoplaceholders:
     description: PseudoPlaceholders Menu

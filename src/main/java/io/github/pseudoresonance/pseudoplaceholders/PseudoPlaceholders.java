@@ -44,7 +44,7 @@ public class PseudoPlaceholders extends PseudoPlugin {
 		if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
 			registerHooks();
 		} else
-			PseudoPlaceholders.message.sendPluginError(Bukkit.getConsoleSender(), Errors.CUSTOM, "PlaceholderAPI is not loaded!");
+			PseudoPlaceholders.message.sendConsolePluginError(Errors.CUSTOM, "PlaceholderAPI is not loaded!");
 			
 	}
 	
@@ -62,9 +62,9 @@ public class PseudoPlaceholders extends PseudoPlugin {
 			m.invoke((Object) null, "pseudomusic");
 			m.invoke((Object) null, "pseudoplayers");
 			m.invoke((Object) null, "pseudoutils");
-			message.sendPluginMessage(Bukkit.getConsoleSender(), "Unregistered all Placeholder Hooks!");
+			message.sendConsolePluginMessage("Unregistered all Placeholder Hooks!");
 		} catch (ClassNotFoundException | NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-			message.sendPluginError(Bukkit.getConsoleSender(), Errors.CUSTOM, "Failed to access PlaceholderAPI!");
+			message.sendConsolePluginError(Errors.CUSTOM, "Failed to access PlaceholderAPI!");
 			e.printStackTrace();
 		}
 		registerHooks();
@@ -76,21 +76,21 @@ public class PseudoPlaceholders extends PseudoPlugin {
 			Class<?> hook = Class.forName("me.clip.placeholderapi.PlaceholderHook");
 			Method m = c.getMethod("registerPlaceholderHook", String.class, hook);
 			m.invoke((Object) null, "pseudoapi", new PseudoAPIHooks());
-			message.sendPluginMessage(Bukkit.getConsoleSender(), "Registered PseudoAPI Placeholder Hooks!");
+			message.sendConsolePluginMessage("Registered PseudoAPI Placeholder Hooks!");
 			if (Bukkit.getPluginManager().getPlugin("PseudoMusic") != null) {
 				m.invoke((Object) null, "pseudomusic", new PseudoMusicHooks());
-				message.sendPluginMessage(Bukkit.getConsoleSender(), "Registered PseudoMusic Placeholder Hooks!");
+				message.sendConsolePluginMessage("Registered PseudoMusic Placeholder Hooks!");
 			}
 			if (Bukkit.getPluginManager().getPlugin("PseudoPlayers") != null) {
 				m.invoke((Object) null, "pseudoplayers", new PseudoPlayersHooks());
-				message.sendPluginMessage(Bukkit.getConsoleSender(), "Registered PseudoPlayers Placeholder Hooks!");
+				message.sendConsolePluginMessage("Registered PseudoPlayers Placeholder Hooks!");
 			}
 			if (Bukkit.getPluginManager().getPlugin("PseudoUtils") != null) {
 				m.invoke((Object) null, "pseudoutils", new PseudoUtilsHooks());
-				message.sendPluginMessage(Bukkit.getConsoleSender(), "Registered PseudoUtils Placeholder Hooks!");
+				message.sendConsolePluginMessage("Registered PseudoUtils Placeholder Hooks!");
 			}
 		} catch (ClassNotFoundException | NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-			message.sendPluginError(Bukkit.getConsoleSender(), Errors.CUSTOM, "Failed to access PlaceholderAPI!");
+			message.sendConsolePluginError(Errors.CUSTOM, "Failed to access PlaceholderAPI!");
 			e.printStackTrace();
 		}
 	}
