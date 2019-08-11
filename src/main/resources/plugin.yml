@@ -1,7 +1,7 @@
 name: ${project.artifactId}
 author: PseudoResonance
 main: io.github.pseudoresonance.pseudoplaceholders.PseudoPlaceholders
-version: ${version}
+version: ${revision}
 description: Placeholder hooks for PseudoResonance's plugins
 api-version: 1.13
 depend: [PseudoAPI]
