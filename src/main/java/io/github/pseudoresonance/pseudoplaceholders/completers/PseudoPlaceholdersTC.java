@@ -16,6 +16,12 @@ public class PseudoPlaceholdersTC implements TabCompleter {
 			if (sender.hasPermission("pseudoplaceholders.reload")) {
 				possible.add("reload");
 			}
+			if (sender.hasPermission("pseudoplaceholders.reloadlocalization")) {
+				possible.add("reloadlocalization");
+			}
+			if (sender.hasPermission("pseudoplaceholders.resetlocalization")) {
+				possible.add("resetlocalization");
+			}
 			if (args[0].equalsIgnoreCase("")) {
 				return possible;
 			} else {

@@ -5,7 +5,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import io.github.pseudoresonance.pseudoapi.bukkit.Message.Errors;
+import io.github.pseudoresonance.pseudoapi.bukkit.language.LanguageManager;
+import io.github.pseudoresonance.pseudoapi.bukkit.Chat.Errors;
 import io.github.pseudoresonance.pseudoapi.bukkit.SubCommandExecutor;
 import io.github.pseudoresonance.pseudoplaceholders.PseudoPlaceholders;
 
@@ -15,13 +16,13 @@ public class ReloadSC implements SubCommandExecutor {
 		if (!(sender instanceof Player) || sender.hasPermission("pseudoplaceholders.reload")) {
 			if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
 				((PseudoPlaceholders) PseudoPlaceholders.plugin).reloadHooks();
-				PseudoPlaceholders.message.sendPluginMessage(sender, "Placeholder hooks reloaded!");
+				PseudoPlaceholders.plugin.getChat().sendPluginMessage(sender, LanguageManager.getLanguage(sender).getMessage("pseudoplaceholders.reloaded"));
 				return true;
 			}
-			PseudoPlaceholders.message.sendPluginError(sender, Errors.CUSTOM, "PlaceholderAPI is not loaded!");
+			PseudoPlaceholders.plugin.getChat().sendPluginError(sender, Errors.CUSTOM, LanguageManager.getLanguage(sender).getMessage("pseudoplaceholders.placeholderapi_not_loaded"));
 			return false;
 		} else {
-			PseudoPlaceholders.message.sendPluginError(sender, Errors.NO_PERMISSION, "reload placeholder hooks!");
+			PseudoPlaceholders.plugin.getChat().sendPluginError(sender, Errors.CUSTOM, LanguageManager.getLanguage(sender).getMessage("pseudoplaceholders.permission_reload"));
 			return false;
 		}
 	}

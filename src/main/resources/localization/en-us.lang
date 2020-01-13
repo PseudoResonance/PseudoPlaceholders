@@ -1,0 +1,21 @@
+# en-us lang file
+
+pseudoplaceholders:
+  pseudoplaceholders_help: "Shows PseudoPlaceholders information"
+  pseudoplaceholders_help_help: "Shows PseudoPlaceholders commands"
+  pseudoplaceholders_reload_help: "Reloads PseudoPlaceholders hooks"
+  pseudoplaceholders_reloadlocalization_help: "Reloads PseudoPlaceholders localization"
+  pseudoplaceholders_resetlocalization_help: "Resets PseudoPlaceholders localization"
+  reloaded: "Placeholder hooks reloaded!"
+  unregistered_all: "Unregistered all Placeholder Hooks!"
+  error_failed_access_placeholderapi: "Failed to access PlaceholderAPI!"
+  placeholderapi_not_loaded: "PlaceholderAPI is not loaded!"
+  registered_hook: "Registered {$1$} Placeholder Hooks!"
+  unknown: "Unknown"
+  not_player: "Not a player"
+  plugin_not_installed: "{$1$} not installed!"
+  tps: "{$1$} TPS"
+  true: "True"
+  false: "False"
+  none: "None"
+  permission_reload: "reload placeholder hooks"
