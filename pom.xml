@@ -150,6 +150,10 @@
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
 		</repository>
+		<repository>
+			<id>CodeMC</id>
+			<url>https://repo.codemc.org/repository/maven-public</url>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
@@ -187,6 +191,11 @@
 			<artifactId>placeholderapi</artifactId>
 			<version>2.10.3</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.bstats</groupId>
+			<artifactId>bstats-bukkit</artifactId>
+			<version>1.5</version>
 		</dependency>
 	</dependencies>
 </project>
