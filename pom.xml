@@ -171,9 +171,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.github.PseudoResonance</groupId>
+			<groupId>io.github.pseudoresonance</groupId>
 			<artifactId>PseudoPlayers</artifactId>
-			<version>1.4.4</version>
+			<version>1.4.5</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
