@@ -13,7 +13,7 @@ public class ReloadLocalizationSC implements SubCommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if (!(sender instanceof Player) || sender.hasPermission("pseudoutils.reloadlocalization")) {
+		if (!(sender instanceof Player) || sender.hasPermission("pseudoplaceholders.reloadlocalization")) {
 			try {
 				LanguageManager.copyDefaultPluginLanguageFiles(PseudoPlaceholders.plugin, false);
 			} catch (Exception e) {

@@ -13,8 +13,17 @@ permissions:
   pseudoplaceholders.reload:
     description: Allows the player to reload the placeholder hooks
     default: op
+  pseudoplaceholders.reloadlocalization:
+    description: Allows the player to reload the localization
+    default: op
+  pseudoplaceholders.resetlocalization:
+    description: Allows the player to reload the localization
+    default: op
+    children:
+      pseudoplaceholders.reloadlocalization: true
   pseudoplaceholders.*:
     description: Gives the user all PseudoPlaceholders permissions
     default: op
     children:
       pseudoplaceholders.reload: true
+      pseudoplaceholders.resetlocalization: true
