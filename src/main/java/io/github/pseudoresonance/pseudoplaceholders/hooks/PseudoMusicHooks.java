@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 
 import io.github.pseudoresonance.pseudoapi.bukkit.language.LanguageManager;
 import io.github.pseudoresonance.pseudomusic.JukeboxController;
-import io.github.pseudoresonance.pseudomusic.PlayerType;
+import io.github.pseudoresonance.pseudomusic.JukeboxController.PlayerType;
 import me.clip.placeholderapi.PlaceholderHook;
 
 public class PseudoMusicHooks extends PlaceholderHook {
