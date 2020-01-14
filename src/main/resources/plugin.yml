@@ -17,7 +17,7 @@ permissions:
     description: Allows the player to reload the localization
     default: op
   pseudoplaceholders.resetlocalization:
-    description: Allows the player to reload the localization
+    description: Allows the player to reset the localization
     default: op
     children:
       pseudoplaceholders.reloadlocalization: true
